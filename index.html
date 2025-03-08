@@ -34,6 +34,7 @@
             background-color: var(--beige);
             padding: 1.5rem 0;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: relative;
         }
         
         .container {
@@ -62,6 +63,18 @@
         
         .logo-icon {
             font-size: 2rem;
+        }
+        
+        /* Menu hamburger pour mobile */
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+            z-index: 1000;
+        }
+        
+        nav {
+            transition: transform 0.3s ease-in-out;
         }
         
         nav ul {
@@ -353,28 +366,106 @@
         /* Responsive */
         @media screen and (max-width: 768px) {
             .hero-content {
-                width: 80%;
+                width: 100%;
+                padding: 0 1rem;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
             }
             
             .about-content {
                 flex-direction: column;
             }
             
-            .about-image, .about-text {
+            .about-image {
                 width: 100%;
+                height: 250px;
             }
             
-            .header-content {
-                flex-direction: column;
+            /* Menu mobile */
+            .menu-toggle {
+                display: block;
+            }
+            
+            nav {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 80%;
+                max-width: 300px;
+                height: 100vh;
+                background-color: var(--beige);
+                z-index: 999;
+                box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+                transition: right 0.3s ease-in-out;
+                padding: 6rem 1.5rem 2rem 1.5rem;
+            }
+            
+            nav.active {
+                right: 0;
             }
             
             nav ul {
-                margin-top: 1rem;
+                flex-direction: column;
+                align-items: center;
             }
             
             nav ul li {
-                margin-left: 1rem;
-                margin-right: 1rem;
+                margin: 1rem 0;
+                width: 100%;
+                text-align: center;
+            }
+            
+            nav ul li a {
+                display: block;
+                padding: 0.8rem 0;
+                font-size: 1.2rem;
+            }
+            
+            /* Overlay pour fermer le menu */
+            .overlay {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.5);
+                z-index: 998;
+                opacity: 0;
+                visibility: hidden;
+                transition: opacity 0.3s;
+            }
+            
+            .overlay.active {
+                opacity: 1;
+                visibility: visible;
+            }
+            
+            /* Ajustement des grilles */
+            .services-grid,
+            .testimonial-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+            }
+        }
+        
+        @media screen and (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .contact-form,
+            .contact-info {
+                padding: 0 1rem;
             }
         }
     </style>
@@ -388,7 +479,8 @@
                     <span class="logo-icon">🔑</span>
                     <span class="logo-text">La Boîte à Clés</span>
                 </div>
-                <nav>
+                <div class="menu-toggle" id="menuToggle">☰</div>
+                <nav id="mobileMenu">
                     <ul>
                         <li><a href="#accueil">Accueil</a></li>
                         <li><a href="#services">Services</a></li>
@@ -400,6 +492,8 @@
             </div>
         </div>
     </header>
+    
+    <div class="overlay" id="menuOverlay"></div>
 
     <!-- Section héro -->
     <section class="hero" id="accueil">
@@ -576,5 +670,32 @@
             </div>
         </div>
     </footer>
+
+    <!-- JavaScript pour le menu mobile -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.getElementById('menuToggle');
+            const mobileMenu = document.getElementById('mobileMenu');
+            const overlay = document.getElementById('menuOverlay');
+            const menuLinks = document.querySelectorAll('#mobileMenu a');
+            
+            function toggleMenu() {
+                mobileMenu.classList.toggle('active');
+                overlay.classList.toggle('active');
+                document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+            }
+            
+            menuToggle.addEventListener('click', toggleMenu);
+            overlay.addEventListener('click', toggleMenu);
+            
+            menuLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileMenu.classList.remove('active');
+                    overlay.classList.remove('active');
+                    document.body.style.overflow = '';
+                });
+            });
+        });
+    </script>
 </body>
 </html>
