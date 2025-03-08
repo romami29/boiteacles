@@ -429,6 +429,7 @@
                 display: block;
             }
 
+            /* Menu mobile */
             nav {
                 position: fixed;
                 top: 0;
@@ -436,9 +437,10 @@
                 width: 80%;
                 max-width: 300px;
                 height: 100vh;
-                background-color: var(--beige);
+                background-color: var(--jaune-logo); /* Utilisation du jaune du logo plutôt que beige */
+                opacity: 0.95; /* Ajout d'une forte opacité (95%) */
                 z-index: 999;
-                box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+                box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée */
                 transition: right 0.3s ease-in-out;
                 padding: 6rem 1.5rem 2rem 1.5rem;
             }
