@@ -10,11 +10,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Satisfy&family=Montserrat:wght@300;400&display=swap"
         rel="stylesheet">
     <style>
-        /* Variables de couleurs */
+        /* Variables de couleurs - Nouvelle palette jaune et bleu */
         :root {
             --jaune-logo: #ffd56c;
             --jaune-clair: #ffe697;
             --jaune-fonce: #e6b94e;
+            --bleu-principal: #3a7ca5;
+            --bleu-clair: #81c3d7;
+            --bleu-fonce: #2c5d8a;
             --gris-texte: #333333;
             --blanc: #ffffff;
         }
@@ -127,19 +130,19 @@
 
         nav ul li a {
             text-decoration: none;
-            color: var(--gris-texte);
+            color: var(--bleu-fonce);
             font-weight: 500;
             transition: color 0.3s;
         }
 
         nav ul li a:hover {
-            color: var(--marron-clair);
+            color: var(--bleu-principal);
         }
 
         /* Section héro */
         .hero {
             height: 80vh;
-            background-color: var(--beige-clair);
+            background-color: var(--bleu-clair);
             display: flex;
             align-items: center;
             position: relative;
@@ -165,7 +168,7 @@
 
         .btn {
             display: inline-block;
-            background-color: var(--marron-clair);
+            background-color: var(--bleu-principal);
             color: var(--blanc);
             padding: 0.8rem 1.5rem;
             border-radius: 4px;
@@ -175,7 +178,7 @@
         }
 
         .btn:hover {
-            background-color: var(--beige-fonce);
+            background-color: var(--bleu-fonce);
         }
 
         /* Section services */
@@ -188,7 +191,7 @@
             text-align: center;
             margin-bottom: 3rem;
             font-size: 2.2rem;
-            color: var(--gris-texte);
+            color: var(--bleu-fonce);
         }
 
         .services-grid {
@@ -198,7 +201,7 @@
         }
 
         .service-card {
-            background-color: var(--beige-clair);
+            background-color: var(--jaune-clair);
             padding: 2rem;
             border-radius: 8px;
             text-align: center;
@@ -212,18 +215,18 @@
         .service-icon {
             font-size: 2.5rem;
             margin-bottom: 1rem;
-            color: var(--marron-clair);
+            color: var(--bleu-principal);
         }
 
         .service-card h3 {
             margin-bottom: 1rem;
-            color: var(--gris-texte);
+            color: var(--bleu-fonce);
         }
 
         /* Section à propos */
         .about {
             padding: 5rem 0;
-            background-color: var(--beige-clair);
+            background-color: var(--bleu-clair);
         }
 
         .about-content {
@@ -234,7 +237,7 @@
 
         .about-image {
             flex: 1;
-            background-color: var(--beige);
+            background-color: var(--jaune-clair);
             height: 400px;
             border-radius: 8px;
             display: flex;
@@ -251,7 +254,7 @@
         .about-text h2 {
             margin-bottom: 1.5rem;
             font-size: 2.2rem;
-            color: var(--gris-texte);
+            color: var(--bleu-fonce);
         }
 
         /* Section témoignages */
@@ -267,7 +270,7 @@
         }
 
         .testimonial-card {
-            background-color: var(--beige-clair);
+            background-color: var(--jaune-clair);
             padding: 2rem;
             border-radius: 8px;
             position: relative;
@@ -280,6 +283,7 @@
 
         .testimonial-author {
             font-weight: 600;
+            color: var(--bleu-fonce);
         }
 
         .quote-icon {
@@ -287,14 +291,14 @@
             top: 1rem;
             right: 1rem;
             font-size: 2rem;
-            color: var(--beige-fonce);
-            opacity: 0.5;
+            color: var(--bleu-principal);
+            opacity: 0.7;
         }
 
         /* Section contact */
         .contact {
             padding: 5rem 0;
-            background-color: var(--beige-clair);
+            background-color: var(--bleu-clair);
         }
 
         .contact-grid {
@@ -306,7 +310,7 @@
         .contact-info h3,
         .contact-form h3 {
             margin-bottom: 1.5rem;
-            color: var(--gris-texte);
+            color: var(--bleu-fonce);
         }
 
         .contact-info p {
@@ -321,7 +325,7 @@
 
         .contact-icon {
             margin-right: 1rem;
-            color: var(--marron-clair);
+            color: var(--bleu-principal);
         }
 
         .form-group {
@@ -331,13 +335,13 @@
         .form-group label {
             display: block;
             margin-bottom: 0.5rem;
-            color: var(--gris-texte);
+            color: var(--bleu-fonce);
         }
 
         .form-control {
             width: 100%;
             padding: 0.8rem;
-            border: 1px solid var(--beige);
+            border: 1px solid var(--jaune-clair);
             border-radius: 4px;
             background-color: var(--blanc);
             font-family: inherit;
@@ -350,7 +354,7 @@
 
         /* Pied de page */
         footer {
-            background-color: var(--beige);
+            background-color: var(--jaune-logo);
             padding: 3rem 0;
             color: var(--gris-texte);
         }
@@ -376,7 +380,7 @@
         .footer-title {
             margin-bottom: 1.5rem;
             font-size: 1.2rem;
-            color: var(--gris-texte);
+            color: var(--bleu-fonce);
         }
 
         .footer-links ul {
@@ -389,19 +393,19 @@
 
         .footer-links ul li a {
             text-decoration: none;
-            color: var(--gris-texte);
+            color: var(--bleu-fonce);
             transition: color 0.3s;
         }
 
         .footer-links ul li a:hover {
-            color: var(--marron-clair);
+            color: var(--bleu-principal);
         }
 
         .copyright {
             text-align: center;
             padding-top: 2rem;
             margin-top: 2rem;
-            border-top: 1px solid var(--beige-fonce);
+            border-top: 1px solid var(--jaune-fonce);
         }
 
         /* Responsive */
@@ -437,10 +441,10 @@
                 width: 80%;
                 max-width: 300px;
                 height: 100vh;
-                background-color: var(--jaune-logo); /* Utilisation du jaune du logo plutôt que beige */
-                opacity: 0.95; /* Ajout d'une forte opacité (95%) */
+                background-color: var(--jaune-logo);
+                opacity: 0.95;
                 z-index: 999;
-                box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée */
+                box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
                 transition: right 0.3s ease-in-out;
                 padding: 6rem 1.5rem 2rem 1.5rem;
             }
