@@ -1,14 +1,15 @@
 /* Variables de couleurs - Palette élégante en turquoise et or */
 :root {
-    --gold-primary: #d4af37;
-    --gold-light: #e6c870;
-    --gold-dark: #ba9423;
-    --teal-primary: #007991;
-    --teal-light: #e0f7fa;
-    --teal-dark: #005670;
-    --teal-accent: #439cab;
-    --neutral-dark: #333333;
-    --neutral-light: #f9f9f9;
+    /* Updated elegant color palette */
+    --gold-primary: #d4b254;       /* Softer, more muted gold */
+    --gold-light: #e9d6a5;         /* Lighter, creamier gold accent */
+    --gold-dark: #ba9636;          /* Deeper, richer gold */
+    --teal-primary: #1a5f6c;       /* Deeper, more sophisticated teal */
+    --teal-light: #e5f4f5;         /* Softer, more subtle light teal */
+    --teal-dark: #0d3942;          /* Darker, more dramatic teal */
+    --teal-accent: #2c7d8c;        /* Vibrant teal for highlights */
+    --neutral-dark: #2c3e50;       /* Rich navy-tinged dark neutral */
+    --neutral-light: #f8f9fa;      /* Cleaner, crisper light neutral */
     --white: #ffffff;
     --shadow-light: 0 5px 15px rgba(0, 0, 0, 0.05);
     --shadow-medium: 0 8px 20px rgba(0, 0, 0, 0.1);
