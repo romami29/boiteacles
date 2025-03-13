@@ -514,6 +514,30 @@ footer {
     margin-left: 0;
 }
 
+.color-picker-panel.open .color-picker-content {
+    max-height: 500px;
+    padding: 15px;
+}
+
+.color-picker-content {
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+}
+
+/* Animations au défilement */
+.service-card, .location-card, .testimonial {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.service-card.animate, .location-card.animate, .testimonial.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .header-content h1 {
