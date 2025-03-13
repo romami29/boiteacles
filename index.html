@@ -1,258 +1,221 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La Boîte à Clés - Services de Conciergerie</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Satisfy&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    <title>La Boîte à Clés - Conciergerie en Finistère</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-    <!-- En-tête -->
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <div class="logo">
-                    <div class="logo-main">
-                        <div class="logo-house"></div>
-                        <span class="logo-text">La Boîte à Clés</span>
-                        <span class="logo-icon">🔑</span>
-                    </div>
-                    <div class="logo-slogan">
-                        <div>LA CONCIERGERIE</div>
-                        <div>QUI SIMPLIFIE VOTRE VIE</div>
-                    </div>
-                </div>
-                <div class="menu-toggle" id="menuToggle">☰</div>
-                <nav id="mobileMenu">
-                    <ul>
-                        <li><a href="#accueil">Accueil</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#beach-view">Notre Vision</a></li>
-                        <li><a href="#testimonials">Témoignages</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </nav>
-            </div>
+    <header id="header">
+        <div class="header-content">
+            <h1>La Boîte à Clés</h1>
+            <p>Conciergerie en Finistère</p>
         </div>
     </header>
 
-    <div class="overlay" id="menuOverlay"></div>
+    <nav>
+        <ul>
+            <li><a href="#services">Nos Services et Tarifs</a></li>
+            <li><a href="#locations">Les Locations</a></li>
+            <li><a href="#presentation">Présentation</a></li>
+            <li><a href="#contact">Contact et Réservation</a></li>
+        </ul>
+    </nav>
 
-    <!-- Section héro -->
-    <section class="hero" id="accueil">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Votre tranquillité d'esprit est notre priorité</h1>
-                <p>La Boîte à Clés vous propose des services de conciergerie sur mesure pour simplifier votre quotidien
-                    et répondre à tous vos besoins.</p>
-                <a href="#contact" class="btn">Contactez-nous</a>
+    <main>
+        <section id="services">
+            <h2>Nos Services et Tarifs</h2>
+            
+            <div class="service-card">
+                <h3>Conciergerie pour Locations Saisonnières</h3>
+                <p>Gestion complète de vos annonces sur Airbnb, Booking.com et autres plateformes.</p>
+                <ul>
+                    <li>Création et optimisation des annonces</li>
+                    <li>Gestion des réservations et communication avec les voyageurs</li>
+                    <li>Accueil des voyageurs et remise des clés</li>
+                    <li>Ménage et préparation entre chaque séjour</li>
+                </ul>
+                <p class="price">À partir de 15% des revenus locatifs</p>
             </div>
-        </div>
-    </section>
 
-    <!-- Section services avec contenu intégré de "À propos" -->
-    <section class="services" id="services">
-        <div class="container">
-            <h2 class="section-title">Nos Services</h2>
-            <div class="services-introduction">
-                <p>Fondée avec la conviction que chacun mérite un service personnalisé et de qualité, La Boîte à
-                    Clés est devenue la référence en matière de conciergerie privée. Notre équipe de professionnels 
-                    dévoués s'engage à vous offrir un service d'exception, avec discrétion, fiabilité et excellence.</p>
+            <div class="service-card">
+                <h3>Offres sur Mesures, Packs et Abonnements</h3>
+                <p>Des solutions adaptées à vos besoins spécifiques.</p>
+                <ul>
+                    <li>Pack Essentiel: gestion des réservations et accueil</li>
+                    <li>Pack Sérénité: gestion complète incluant le ménage</li>
+                    <li>Pack Premium: services additionnels personnalisés</li>
+                </ul>
+                <p class="price">Abonnements mensuels à partir de 80€/mois</p>
             </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">🏠</div>
-                    <h3>Gestion immobilière</h3>
-                    <p>Nous prenons soin de votre propriété en votre absence et gérons les locations saisonnières.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🧹</div>
-                    <h3>Entretien & Ménage</h3>
-                    <p>Services de nettoyage réguliers ou ponctuels pour maintenir votre espace impeccable.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">📦</div>
-                    <h3>Réception de colis</h3>
-                    <p>Nous réceptionnons vos livraisons et les conservons en toute sécurité jusqu'à votre retour.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🛒</div>
-                    <h3>Courses & Approvisionnement</h3>
-                    <p>Service de courses à domicile et approvisionnement de votre réfrigérateur avant votre arrivée.</p>
-                </div>
-            </div>
-            <div class="services-footer">
-                <p>Que vous soyez un particulier, un propriétaire de résidence secondaire
-                    ou une entreprise, nous mettons notre expertise à votre service pour un quotidien simplifié.</p>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Nouvelle section avec l'image de la vue sur mer -->
-    <section class="beach-view" id="beach-view">
-        <div class="container">
-            <div class="beach-view-content">
-                <h2 class="section-title">Notre Vision du Confort</h2>
-                <p>Chez La Boîte à Clés, nous croyons que chaque propriétaire mérite de profiter pleinement de ses espaces, sans stress ni contraintes. Notre objectif est de vous offrir cette tranquillité d'esprit pour que vous puissiez vous concentrer sur l'essentiel.</p>
-                <img src="2.jpg" alt="Vue paisible sur la mer avec un lit suspendu" width="1000" height="600">
-            </div>
-        </div>
-    </section>
 
-    <!-- Section témoignages -->
-    <section class="testimonials" id="testimonials">
-        <div class="container">
-            <h2 class="section-title">Ce que disent nos clients</h2>
-            <div class="testimonial-grid">
-                <div class="testimonial-card">
-                    <div class="quote-icon">❝</div>
-                    <p class="testimonial-text">La Boîte à Clés a transformé la gestion de ma résidence secondaire. Je
-                        n'ai plus à m'inquiéter des imprévus et je sais que ma propriété est entre de bonnes mains.</p>
-                    <p class="testimonial-author">- Sophie Dupont</p>
+            <div class="service-card">
+                <h3>Gestion des Résidences Secondaires</h3>
+                <p>Prenez soin de votre résidence secondaire toute l'année.</p>
+                <ul>
+                    <li>Visite régulière de la propriété</li>
+                    <li>Entretien du jardin et extérieurs</li>
+                    <li>Coordination avec les artisans locaux pour les travaux</li>
+                    <li>Préparation de votre arrivée (chauffage, courses, etc.)</li>
+                </ul>
+                <p class="price">Forfaits personnalisés selon vos besoins</p>
+            </div>
+        </section>
+
+        <section id="locations">
+            <h2>Les Locations</h2>
+            
+            <div class="locations-grid">
+                <div class="location-card">
+                    <div class="location-image" style="background-image: url('https://via.placeholder.com/300x200')"></div>
+                    <h3>Villa Vue Mer à Bénodet</h3>
+                    <p>Magnifique villa avec vue panoramique sur l'océan. 3 chambres, jardin, à 5 minutes de la plage.</p>
+                    <a href="#" class="btn">Voir l'annonce</a>
                 </div>
-                <div class="testimonial-card">
-                    <div class="quote-icon">❝</div>
-                    <p class="testimonial-text">Un service irréprochable ! L'équipe est toujours disponible et réactive.
-                        Je recommande vivement leurs services à tous ceux qui cherchent à simplifier leur quotidien.</p>
-                    <p class="testimonial-author">- Marc Lefebvre</p>
+                
+                <div class="location-card">
+                    <div class="location-image" style="background-image: url('https://via.placeholder.com/300x200')"></div>
+                    <h3>Appartement Cosy à Quimper</h3>
+                    <p>Charmant T2 au cœur du centre historique. Idéal pour découvrir la ville et ses alentours.</p>
+                    <a href="#" class="btn">Voir l'annonce</a>
                 </div>
-                <div class="testimonial-card">
-                    <div class="quote-icon">❝</div>
-                    <p class="testimonial-text">Grâce à La Boîte à Clés, je peux me concentrer sur mon activité
-                        professionnelle sans me soucier des tâches domestiques. Un gain de temps et de tranquillité
-                        inestimable !</p>
-                    <p class="testimonial-author">- Julie Martin</p>
+                
+                <div class="location-card">
+                    <div class="location-image" style="background-image: url('https://via.placeholder.com/300x200')"></div>
+                    <h3>Maison de Pêcheur à Concarneau</h3>
+                    <p>Authentique maison rénovée dans la ville close. Emplacement idéal pour profiter de la vie locale.</p>
+                    <a href="#" class="btn">Voir l'annonce</a>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Section contact -->
-    <section class="contact" id="contact">
-        <div class="container">
-            <h2 class="section-title">Contactez-nous</h2>
-            <div class="contact-grid">
+            <div class="testimonials">
+                <h3>Ce que disent nos clients</h3>
+                
+                <div class="testimonial">
+                    <div class="stars">★★★★★</div>
+                    <p>"Service impeccable ! Notre location n'a jamais été aussi bien gérée. Les clients sont ravis et les revenus sont en hausse."</p>
+                    <p class="author">- Marie L., propriétaire à Bénodet</p>
+                </div>
+                
+                <div class="testimonial">
+                    <div class="stars">★★★★★</div>
+                    <p>"Depuis que je fais appel à La Boîte à Clés, je peux profiter de ma résidence secondaire sans souci. Je recommande vivement !"</p>
+                    <p class="author">- Pierre M., résident secondaire à Quimper</p>
+                </div>
+                
+                <div class="testimonial">
+                    <div class="stars">★★★★☆</div>
+                    <p>"Équipe réactive et professionnelle. Ma maison est entre de bonnes mains toute l'année."</p>
+                    <p class="author">- Sophie D., propriétaire à Concarneau</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="presentation">
+            <h2>Présentation de l'Entreprise</h2>
+            
+            <div class="presentation-content">
+                <div class="presentation-image">
+                    <img src="https://via.placeholder.com/400x300" alt="L'équipe de La Boîte à Clés">
+                </div>
+                
+                <div class="presentation-text">
+                    <p>Créée en 2020, <strong>La Boîte à Clés</strong> est née d'une passion pour le Finistère et d'une volonté d'offrir des services de conciergerie de qualité aux propriétaires de la région.</p>
+                    
+                    <p>Notre équipe de professionnels connaît parfaitement le territoire et ses spécificités. Nous mettons notre expertise au service de votre bien pour en optimiser la gestion et la rentabilité.</p>
+                    
+                    <p>Nous privilégions une approche personnalisée et sur-mesure, adaptée aux besoins spécifiques de chaque propriétaire et de chaque bien.</p>
+                    
+                    <p>Notre mission : vous offrir tranquillité d'esprit et satisfaction, tout en valorisant votre bien auprès des voyageurs.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact et Réservation</h2>
+            
+            <div class="contact-container">
                 <div class="contact-info">
-                    <h3>Nos coordonnées</h3>
-                    <div class="contact-info-item">
-                        <span class="contact-icon">📍</span>
-                        <p>12 rue des Clés, 75008 Paris</p>
-                    </div>
-                    <div class="contact-info-item">
-                        <span class="contact-icon">📞</span>
-                        <p>+33 1 23 45 67 89</p>
-                    </div>
-                    <div class="contact-info-item">
-                        <span class="contact-icon">✉️</span>
-                        <p>contact@laboiteacles.fr</p>
-                    </div>
-                    <div class="contact-info-item">
-                        <span class="contact-icon">🕐</span>
-                        <p>Lundi - Vendredi : 9h - 18h</p>
+                    <h3>Nous contacter</h3>
+                    <p><i class="icon">📱</i> Téléphone : 06 XX XX XX XX</p>
+                    <p><i class="icon">📧</i> Email : contact@laboiteacles.fr</p>
+                    <p><i class="icon">📍</i> Adresse : 10 rue de l'Océan, 29000 Quimper</p>
+                    
+                    <div class="social-media">
+                        <a href="#" class="social-icon">Facebook</a>
+                        <a href="#" class="social-icon">Instagram</a>
                     </div>
                 </div>
+                
                 <div class="contact-form">
-                    <h3>Envoyez-nous un message</h3>
-                    <form action="#" method="post">
+                    <h3>Demande d'information</h3>
+                    <form>
                         <div class="form-group">
                             <label for="name">Nom</label>
-                            <input type="text" id="name" class="form-control" required>
+                            <input type="text" id="name" name="name" required>
                         </div>
+                        
                         <div class="form-group">
                             <label for="email">Email</label>
-                            <input type="email" id="email" class="form-control" required>
+                            <input type="email" id="email" name="email" required>
                         </div>
+                        
                         <div class="form-group">
                             <label for="phone">Téléphone</label>
-                            <input type="tel" id="phone" class="form-control">
+                            <input type="tel" id="phone" name="phone">
                         </div>
-                        <div class="form-group">
-                            <label for="service">Service souhaité</label>
-                            <select id="service" class="form-control" required>
-                                <option value="">Sélectionnez un service</option>
-                                <option value="gestion">Gestion immobilière</option>
-                                <option value="entretien">Entretien & Ménage</option>
-                                <option value="colis">Réception de colis</option>
-                                <option value="courses">Courses & Approvisionnement</option>
-                                <option value="autre">Autre (précisez)</option>
-                            </select>
-                        </div>
+                        
                         <div class="form-group">
                             <label for="message">Message</label>
-                            <textarea id="message" class="form-control" required></textarea>
+                            <textarea id="message" name="message" rows="5" required></textarea>
                         </div>
+                        
                         <button type="submit" class="btn">Envoyer</button>
                     </form>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- Pied de page -->
     <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <div class="logo">
-                        <span class="logo-icon">🔑</span>
-                        <span class="logo-text">La Boîte à Clés</span>
-                    </div>
-                    <p>Votre conciergerie de confiance pour un quotidien simplifié.</p>
-                </div>
-                <div class="footer-links">
-                    <h3 class="footer-title">Liens rapides</h3>
-                    <ul>
-                        <li><a href="#accueil">Accueil</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#beach-view">Notre Vision</a></li>
-                        <li><a href="#testimonials">Témoignages</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-contact">
-                    <h3 class="footer-title">Contact</h3>
-                    <p>12 rue des Clés, 75008 Paris</p>
-                    <p>+33 1 23 45 67 89</p>
-                    <p>contact@laboiteacles.fr</p>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2025 La Boîte à Clés - Tous droits réservés</p>
+        <div class="footer-content">
+            <div class="footer-info">
+                <h3>La Boîte à Clés</h3>
+                <p>Conciergerie en Finistère</p>
+                <p>&copy; 2025 La Boîte à Clés. Tous droits réservés.</p>
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript pour le menu mobile -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const menuToggle = document.getElementById('menuToggle');
-            const mobileMenu = document.getElementById('mobileMenu');
-            const overlay = document.getElementById('menuOverlay');
-            const menuLinks = document.querySelectorAll('#mobileMenu a');
+    <!-- Color Picker Panel (déplacé en dehors du footer pour être plus visible) -->
+    <div class="color-picker-panel">
+        <div class="color-picker-toggle">Personnaliser les couleurs</div>
+        <div class="color-picker-content">
+            <h4>Personnaliser le thème</h4>
+            <div class="color-inputs">
+                <div class="color-input-group">
+                    <label for="primary-color">Couleur principale:</label>
+                    <input type="color" id="primary-color" value="#1a5276">
+                    <span class="color-preview" id="primary-preview">#1a5276</span>
+                </div>
+                <div class="color-input-group">
+                    <label for="secondary-color">Couleur secondaire:</label>
+                    <input type="color" id="secondary-color" value="#f39c12">
+                    <span class="color-preview" id="secondary-preview">#f39c12</span>
+                </div>
+            </div>
+            <div class="color-presets">
+                <h5>Thèmes prédéfinis:</h5>
+                <button class="preset-btn" data-primary="#1a5276" data-secondary="#f39c12">Bleu & Orange</button>
+                <button class="preset-btn" data-primary="#27ae60" data-secondary="#e74c3c">Vert & Rouge</button>
+                <button class="preset-btn" data-primary="#8e44ad" data-secondary="#f1c40f">Violet & Jaune</button>
+                <button class="preset-btn" data-primary="#2c3e50" data-secondary="#3498db">Marine & Bleu ciel</button>
+            </div>
+            <button id="reset-colors" class="btn">Réinitialiser</button>
+        </div>
+    </div>
 
-            function toggleMenu() {
-                mobileMenu.classList.toggle('active');
-                overlay.classList.toggle('active');
-                document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
-            }
-
-            menuToggle.addEventListener('click', toggleMenu);
-            overlay.addEventListener('click', toggleMenu);
-
-            menuLinks.forEach(link => {
-                link.addEventListener('click', function () {
-                    mobileMenu.classList.remove('active');
-                    overlay.classList.remove('active');
-                    document.body.style.overflow = '';
-                });
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
-
 </html>
