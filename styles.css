@@ -26,7 +26,7 @@ body {
 /* Header */
 #header {
     height: 100vh;
-    background-image: url('beach.jpg');
+    background-image: url('https://via.placeholder.com/1920x1080');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -148,6 +148,7 @@ h2::after {
     margin-bottom: 2rem;
     box-shadow: var(--box-shadow);
     transition: var(--transition);
+    border-top: 3px solid var(--primary-color);
 }
 
 .service-card:hover {
@@ -245,6 +246,7 @@ h2::after {
     padding: 1.5rem;
     margin-bottom: 1.5rem;
     box-shadow: var(--box-shadow);
+    border-left: 4px solid var(--secondary-color);
 }
 
 .stars {
@@ -368,23 +370,101 @@ footer {
     margin-bottom: 0.5rem;
 }
 
-.color-picker {
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 1rem;
+/* Color Picker Panel - Improved version */
+.color-picker-panel {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1001;
+    background-color: var(--light-color);
     border-radius: var(--border-radius);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    width: 300px;
+    transition: var(--transition);
 }
 
-.color-picker h4 {
-    margin-bottom: 1rem;
+.color-picker-toggle {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    padding: 10px 15px;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
 }
 
-.color-inputs {
+.color-picker-content {
+    padding: 15px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+}
+
+.color-picker-panel.open .color-picker-content {
+    max-height: 500px;
+}
+
+.color-picker-content h4 {
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+.color-input-group {
     display: flex;
-    gap: 1rem;
+    align-items: center;
+    margin-bottom: 15px;
 }
 
-.color-inputs label {
-    margin-right: 0.5rem;
+.color-input-group label {
+    width: 130px;
+    margin-bottom: 0;
+}
+
+.color-input-group input[type="color"] {
+    height: 30px;
+    width: 50px;
+    padding: 0;
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+
+.color-preview {
+    margin-left: 10px;
+    font-family: monospace;
+    font-size: 0.9rem;
+}
+
+.color-presets {
+    margin-top: 15px;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
+
+.color-presets h5 {
+    margin-bottom: 10px;
+    color: var(--dark-color);
+}
+
+.preset-btn {
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    margin: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.preset-btn:hover {
+    background-color: #e0e0e0;
+}
+
+#reset-colors {
+    display: block;
+    width: 100%;
+    margin-top: 15px;
+    margin-left: 0;
 }
 
 /* Responsive Design */
@@ -413,7 +493,9 @@ footer {
         text-align: center;
     }
     
-    .color-picker {
-        margin-top: 2rem;
+    .color-picker-panel {
+        width: 250px;
+        bottom: 10px;
+        right: 10px;
     }
 }
