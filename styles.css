@@ -103,14 +103,6 @@ body {
     padding: 2rem;
 }
 
-.header-content h1 {
-    font-size: 5rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
 .header-content p {
     font-size: 1.5rem;
     margin-bottom: 2rem;
