@@ -140,7 +140,15 @@ document.addEventListener('DOMContentLoaded', function() {
         threshold: 0.1
     };
     
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.
+   const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('animate');
+        }
+    });
+}, observerOptions);
+
+// Observation des éléments à animer
+document.querySelectorAll('.service-card, .location-card, .testimonial').forEach(element => {
+    observer.observe(element);
+});
