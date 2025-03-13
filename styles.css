@@ -43,12 +43,13 @@ body {
 }
 
 .header-content h1 {
-    font-family: 'Brush Script MT', cursive;
+    font-family: 'Brush Script MT', 'Dancing Script', cursive;
     font-size: 5rem;
     font-weight: 400;
     margin-bottom: 0.5rem;
     position: relative;
     z-index: 2;
+    letter-spacing: normal; /* Ajuster ou supprimer letter-spacing */
 }
 
 .key-icon {
